@@ -1,0 +1,43 @@
+ /* Styles for main content */
+main {
+    width: 80%;
+    margin: auto;
+}
+
+/* Ensuring the profile image is not affected by the new img styles */
+main img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Styles for the aside section */
+aside {
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid #333;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+/* Styling for the aside image */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Reset paragraph padding */
+p {
+    padding: 0;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    border-top: 2px solid #333;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}
