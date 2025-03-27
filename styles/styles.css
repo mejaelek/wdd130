@@ -1,0 +1,50 @@
+ /* Apply global styles */
+ * {
+     box-sizing: border-box;
+     font-family: Arial, sans-serif;
+ }
+
+ /* Styles for main content */
+ main {
+     
+     max-width: 800px;
+ }
+
+ /* Profile image styling */
+ main img {
+     width: 150px;
+     height: auto;
+ }
+
+ /* Styles for the aside section */
+ aside {
+     width: 250px;
+     border: 2px solid #333;
+     padding: 15px;
+     background-color: #f0f0f0;
+     color: #333;
+     border-radius: 8px;
+ }
+
+ /* Styling for the aside image */
+ aside img {
+     width: 200px;
+     height: auto;
+     border-radius: 5px;
+ }
+
+ /* Reset paragraph padding */
+ p {
+     padding: 5px;
+     line-height: 1.5;
+ }
+
+ /* Footer styles */
+ footer {
+     margin-top: 20px;
+     border-top: 2px solid #333;
+     text-align: center;
+     padding: 15px;
+     background-color: #444;
+     color: white;
+ }
