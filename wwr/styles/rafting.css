@@ -1,307 +1,156 @@
- /* General Reset */
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
+ /* rafting.css - Optimized version */
 
- /* Base Styles */
  body {
    font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
    line-height: 1.6;
-   background-color: #f4f4f4;
-   color: #333;
  }
 
- /* Header & Navigation */
  header {
-   background-color: #004d40;
+   background: #2a9df4;
    color: white;
-   padding: 1em 2em;
+   padding: 1rem;
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
    align-items: center;
-   flex-wrap: wrap;
  }
 
- .logo {
+ .hero {
    display: flex;
    align-items: center;
    gap: 1rem;
  }
 
- .logo img {
-   height: 50px;
+ .logo {
+   height: auto;
  }
 
  nav ul {
    display: flex;
    list-style: none;
+   padding: 0;
    gap: 1rem;
-   margin-top: 0.5em;
+   margin-top: 0.5rem;
  }
 
  nav a {
    color: white;
    text-decoration: none;
-   font-weight: normal;
-   font-size: 1rem;
- }
-
- nav a[aria-current="page"] {
    font-weight: bold;
-   border-bottom: 2px solid white;
  }
 
- /* Main Content Area */
  main {
-   padding: 2em;
-   max-width: 1000px;
-   margin: auto;
- }
-
- /* HERO SECTION (Home Page) */
- .hero {
-   position: relative;
-   width: 100%;
-   overflow: hidden;
- }
-
- .hero-image {
-   width: 100%;
-   height: auto;
-   display: block;
- }
-
- .hero-text {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   color: white;
-   text-align: center;
-   background: rgba(0, 0, 0, 0.5);
    padding: 1rem;
-   border-radius: 5px;
  }
 
- /* NEWSLETTER SECTION (Home Page) */
- .newsletter {
-   background-color: #e0f7fa;
-   padding: 2rem;
-   text-align: center;
-   margin: 2rem 0;
- }
-
- .newsletter-form {
-   display: flex;
-   justify-content: center;
-   gap: 1rem;
-   flex-wrap: wrap;
- }
-
- .newsletter-form input[type="text"],
- .newsletter-form input[type="email"] {
-   padding: 0.5rem;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   font-size: 1rem;
- }
-
- .newsletter-form button {
-   padding: 0.6rem 1.2rem;
-   background-color: #00796b;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
- }
-
- /* CALL-TO-ACTION (Home Page) */
- .cta {
-   text-align: center;
-   margin: 2rem 0;
- }
-
- .cta .button {
-   display: inline-block;
-   padding: 0.75rem 1.5rem;
-   background-color: #00796b;
-   color: white;
-   text-decoration: none;
-   border-radius: 5px;
-   margin-top: 1rem;
- }
-
- /* HOME GRID LAYOUT (Home Page) */
- .home-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   gap: 2rem;
-   margin: 2rem 0;
- }
-
- .home-grid .grid-item {
-   background: white;
-   padding: 1rem;
-   border-radius: 8px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   text-align: center;
- }
-
- .home-grid img {
-   width: 100%;
-   height: auto;
-   border-radius: 5px;
-   margin-bottom: 1rem;
- }
-
- /* CONTACT INFO & MAP (Contact Page) */
- .contact-info {
-   display: flex;
-   justify-content: space-between;
-   gap: 20px;
+ .contact-info,
+ .team,
+ .contact-form {
    margin-bottom: 2rem;
  }
 
- .contact-info .info {
-   flex: 1;
-   min-width: 250px;
+ .contact-info h2,
+ .team h2,
+ .contact-form h2 {
+   color: #2a9df4;
+   font-size: 1.8rem;
  }
 
- .contact-info .map {
-   flex: 1;
-   min-width: 250px;
-   max-width: 300px;
+ .info-map {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   align-items: flex-start;
  }
 
  .map iframe {
-   width: 100%;
-   height: 200px;
    border: 0;
+   width: 100%;
+   max-width: 300px;
+   height: 200px;
+   aspect-ratio: 3 / 2;
  }
 
- /* TEAM SECTION (Common across pages) */
  .team {
    display: flex;
-   justify-content: space-around;
-   gap: 20px;
-   margin-top: 2rem;
    flex-wrap: wrap;
+   gap: 1rem;
+   justify-content: space-around;
  }
 
  .team figure {
-   width: 30%;
    text-align: center;
+   flex: 1 1 300px;
  }
 
- .team img {
-   width: 100%;
-   height: auto;
-   border-radius: 5px;
- }
-
- /* CONTACT FORM (Common style) */
- .contact-form {
-   background-color: #fff;
-   padding: 20px;
-   margin-top: 2rem;
-   border-radius: 8px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
-
- .contact-form h2 {
-   margin-bottom: 20px;
-   color: #004d40;
+ .contact-form form {
+   max-width: 600px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
  }
 
  .contact-form .row {
-   margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
  }
 
  .contact-form label {
    font-weight: bold;
-   margin-bottom: 5px;
-   display: block;
+   margin-bottom: 0.5rem;
  }
 
  .contact-form input,
- .contact-form select,
- .contact-form textarea {
-   width: 100%;
-   padding: 10px;
+ .contact-form textarea,
+ .contact-form select {
+   padding: 0.5rem;
    border: 1px solid #ccc;
-   border-radius: 5px;
- }
-
- .contact-form textarea {
-   resize: vertical;
-   min-height: 100px;
+   border-radius: 0.25rem;
  }
 
  .contact-form button {
-   background-color: #004d40;
+   background-color: #2a9df4;
    color: white;
-   padding: 10px 20px;
    border: none;
-   border-radius: 5px;
+   padding: 0.75rem;
+   font-size: 1rem;
+   border-radius: 0.25rem;
    cursor: pointer;
  }
 
  .contact-form button:hover {
-   background-color: #005f73;
+   background-color: #0077cc;
  }
 
- /* FOOTER */
  footer {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #004d40;
+   background: #2a9df4;
    color: white;
-   padding: 1em;
-   flex-wrap: wrap;
- }
-
- footer p {
-   margin: 0.5em;
+   text-align: center;
+   padding: 1rem;
  }
 
  footer a {
-   color: white;
+   color: #fff;
    text-decoration: underline;
  }
 
- footer a:hover {
-   text-decoration: none;
- }
-
- /* Social Media Icons */
  .social {
+   margin-top: 0.5rem;
    display: flex;
-   justify-content: flex-end;
+   justify-content: center;
    gap: 1rem;
-   margin: 0.5em;
  }
 
  .social img {
    width: 30px;
    height: 30px;
-   border-radius: 50%;
  }
 
- /* Responsive Adjustments */
- @media (max-width: 768px) {
-   .contact-info {
+ @media (max-width: 600px) {
+   .info-map {
      flex-direction: column;
-     align-items: center;
-   }
-
-   .contact-info .info,
-   .contact-info .map {
-     width: 100%;
-     text-align: center;
    }
 
    .team {
@@ -309,26 +158,8 @@
      align-items: center;
    }
 
-   .team figure {
-     width: 80%;
-     margin-bottom: 20px;
-   }
-
    nav ul {
      flex-direction: column;
      align-items: center;
-     gap: 0.5rem;
-   }
- }
-
- /* Retina Image Optimization (Optional for high-DPI displays) */
- @media (-webkit-min-device-pixel-ratio: 2),
- (min-resolution: 192dpi) {
-
-   .team img,
-   .logo img,
-   .social img {
-     image-rendering: -webkit-optimize-contrast;
-     transform: scale(1);
    }
  }

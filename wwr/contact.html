@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Contact Whitewater Rafting Co. for trip bookings, questions, and more. Reach out to us by phone, email, or our contact form.">
+    content="Contact Whitewater Rafting Co. for trip bookings, questions, and more. Reach out by phone, email, or via our contact form.">
   <title>Contact Us - Whitewater Rafting Co.</title>
-  <link rel="stylesheet" href="rafting.css">
+  <link rel="preload" as="image" href="images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-  <!-- Header (consistent across pages; using a single h1 for the site title) -->
+  <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Whitewater Rafting Co. logo">
-      <h1>Whitewater Rafting Co.</h1>
+    <div class="hero">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp">
+        <img src="images/logo.png" alt="Rafting Site Logo" class="logo" width="100" height="50">
+      </picture>
+      <h1>Whitewater Rafting</h1>
     </div>
     <nav aria-label="Main navigation">
       <ul>
@@ -27,8 +31,9 @@
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- Changed main heading from h1 to h2 to reserve h1 for site title -->
+    <!-- CONTACT INFO & MAP SECTION -->
     <section class="contact-info">
       <h2>Contact Us</h2>
       <div class="info-map">
@@ -38,43 +43,52 @@
           <p><strong>Email:</strong> info@whitewaterraftingco.com</p>
         </div>
         <div class="map">
-          <iframe
+          <iframe class="map-embed"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.5587806222056!2d-105.27054518462335!3d40.01498497941159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bedc44db918e3:0x81137f42aa4a9e95!2sBoulder,%20CO!5e0!3m2!1sen!2sus!4v1616109813542!5m2!1sen!2sus"
-            width="300" height="200" style="border:0;" allowfullscreen loading="lazy" title="Company Location Map"
+            width="300" height="200" allowfullscreen loading="lazy" title="Company Location Map"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
     </section>
 
-    <!-- Added a heading for the team section -->
+    <!-- TEAM SECTION -->
     <section class="team">
       <h2>Our Team</h2>
       <figure>
-        <img src="images/employee1.jpg" alt="Guide Emily smiling with helmet">
+        <picture>
+          <source srcset="images/employee1.webp" type="image/webp">
+          <img src="images/employee1.webp" alt="Jason – Lead Guide" width="300" height="200" loading="lazy">
+        </picture>
         <figcaption>Jason – Lead Guide</figcaption>
       </figure>
       <figure>
-        <img src="images/employee2.jpg" alt="Guide Jake with paddles by river">
+        <picture>
+          <source srcset="images/employee2.webp" type="image/webp">
+          <img src="images/employee2.webp" alt="Emily – Trip Planner" width="300" height="200" loading="lazy">
+        </picture>
         <figcaption>Emily – Trip Planner</figcaption>
       </figure>
       <figure>
-        <img src="images/employee3.jpg" alt="Guide Sarah at camp with gear">
+        <picture>
+          <source srcset="images/employee3.webp" type="image/webp">
+          <img src="images/employee3.webp" alt="Robert – Safety Expert" width="300" height="200" loading="lazy">
+        </picture>
         <figcaption>Robert – Safety Expert</figcaption>
       </figure>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- CONTACT FORM SECTION -->
     <section class="contact-form">
-      <h2>Send Us a Message</h2>
-      <form>
+      <h2 id="contactFormTitle">Send Us a Message</h2>
+      <form aria-labelledby="contactFormTitle">
         <div class="row">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required autocomplete="name">
         </div>
         <div class="row">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required autocomplete="email">
         </div>
         <div class="row">
           <label for="purpose">Message Purpose:</label>
@@ -87,7 +101,7 @@
         </div>
         <div class="row">
           <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" required autocomplete="off"></textarea>
         </div>
         <div class="row">
           <label>
@@ -100,18 +114,19 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Whitewater Rafting Co.</p>
     <p><a href="images/contact-wireframe.png" target="_blank">View Contact Us Wireframe</a></p>
     <div class="social">
       <a href="#" aria-label="Facebook">
-        <img src="images/facebook-icon.png" alt="Facebook">
+        <img src="images/facebook-icon.png" alt="Facebook" width="30" height="30">
       </a>
       <a href="#" aria-label="Twitter">
-        <img src="images/twitter-icon.png" alt="Twitter">
+        <img src="images/twitter-icon.png" alt="Twitter" width="30" height="30">
       </a>
       <a href="#" aria-label="Instagram">
-        <img src="images/instagram-icon.png" alt="Instagram">
+        <img src="images/instagram-icon.png" alt="Instagram" width="30" height="30">
       </a>
     </div>
   </footer>
