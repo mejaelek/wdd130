@@ -1,133 +1,96 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Contact Whitewater Rafting Co. for trip bookings, questions, and more. Reach out by phone, email, or via our contact form.">
-  <title>Contact Us - Whitewater Rafting Co.</title>
-  <link rel="preload" as="image" href="images/logo.webp" type="image/webp">
-  <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Whitewater Rafting</title>
+  <link rel="stylesheet" href="styles/rafting.css" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="X-Frame-Options" content="DENY">
 </head>
 
 <body>
-  <!-- HEADER -->
   <header>
     <div class="hero">
-      <picture>
-        <source srcset="images/logo.webp" type="image/webp">
-        <img src="images/logo.png" alt="Rafting Site Logo" class="logo" width="100" height="50">
-      </picture>
+      <img src="images/logo.webp" alt="Rafting Site Logo" class="logo" width="100" height="100" loading="lazy" />
       <h1>Whitewater Rafting</h1>
     </div>
-    <nav aria-label="Main navigation">
+    <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-    <!-- CONTACT INFO & MAP SECTION -->
     <section class="contact-info">
       <h2>Contact Us</h2>
-      <div class="info-map">
-        <div class="info">
-          <p><strong>Address:</strong> 123 Rapids Way, Riverbend, CO 80501</p>
-          <p><strong>Phone:</strong> (555) 123-4567</p>
-          <p><strong>Email:</strong> info@whitewaterraftingco.com</p>
-        </div>
-        <div class="map">
-          <iframe class="map-embed"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.5587806222056!2d-105.27054518462335!3d40.01498497941159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bedc44db918e3:0x81137f42aa4a9e95!2sBoulder,%20CO!5e0!3m2!1sen!2sus!4v1616109813542!5m2!1sen!2sus"
-            width="300" height="200" allowfullscreen loading="lazy" title="Company Location Map"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+      <p>Email: info@whitewaterrafting.com</p>
+      <p>Phone: +1 (800) 555-RAFT</p>
+      <p>Address: 123 Rapids Lane, River City, RC 12345</p>
+
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300"
+        style="border:0; border-radius: var(--radius-md);" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Google Maps Location"></iframe>
+    </section>
+
+    <section class="team">
+      <h2>Meet Our Team</h2>
+      <div class="adventure-gallery">
+        <figure>
+          <img src="images/guide1.webp" alt="Adventure Guide Sarah" width="300" height="200" loading="lazy" />
+          <figcaption>Jason, Lead Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="images/guide2.webp" alt="Safety Coordinator Mike" width="300" height="200" loading="lazy" />
+          <figcaption>Sarah, Safety Coordinator</figcaption>
+        </figure>
+        <figure>
+          <img src="images/guide3.webp" alt="River Expert Emma" width="300" height="200" loading="lazy" />
+          <figcaption>Mike, River Expert</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- TEAM SECTION -->
-    <section class="team">
-      <h2>Our Team</h2>
-      <figure>
-        <picture>
-          <source srcset="images/employee1.webp" type="image/webp">
-          <img src="images/employee1.webp" alt="Jason – Lead Guide" width="300" height="200" loading="lazy">
-        </picture>
-        <figcaption>Jason – Lead Guide</figcaption>
-      </figure>
-      <figure>
-        <picture>
-          <source srcset="images/employee2.webp" type="image/webp">
-          <img src="images/employee2.webp" alt="Emily – Trip Planner" width="300" height="200" loading="lazy">
-        </picture>
-        <figcaption>Emily – Trip Planner</figcaption>
-      </figure>
-      <figure>
-        <picture>
-          <source srcset="images/employee3.webp" type="image/webp">
-          <img src="images/employee3.webp" alt="Robert – Safety Expert" width="300" height="200" loading="lazy">
-        </picture>
-        <figcaption>Robert – Safety Expert</figcaption>
-      </figure>
-    </section>
-
-    <!-- CONTACT FORM SECTION -->
     <section class="contact-form">
-      <h2 id="contactFormTitle">Send Us a Message</h2>
-      <form aria-labelledby="contactFormTitle">
-        <div class="row">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required autocomplete="name">
-        </div>
-        <div class="row">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
-        </div>
-        <div class="row">
-          <label for="purpose">Message Purpose:</label>
-          <select id="purpose" name="purpose" required>
-            <option value="">--Please choose an option--</option>
-            <option value="inquiry">General Inquiry</option>
-            <option value="booking">Booking</option>
-            <option value="support">Support</option>
-          </select>
-        </div>
-        <div class="row">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required autocomplete="off"></textarea>
-        </div>
-        <div class="row">
-          <label>
-            <input type="checkbox" name="newsletter">
-            Sign up for our newsletter
-          </label>
-        </div>
-        <button type="submit">Send Message</button>
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label><input type="checkbox" name="subscribe" /> Subscribe to our newsletter</label>
+        <button type="submit" class="cta-button">Send</button>
       </form>
     </section>
+    <p class="wireframe-link"><a href="images/contact-wireframe.png" target="_blank">View Wireframe</a></p>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Whitewater Rafting Co.</p>
-    <p><a href="images/contact-wireframe.png" target="_blank">View Contact Us Wireframe</a></p>
-    <div class="social">
-      <a href="#" aria-label="Facebook">
-        <img src="images/facebook-icon.png" alt="Facebook" width="30" height="30">
-      </a>
-      <a href="#" aria-label="Twitter">
-        <img src="images/twitter-icon.png" alt="Twitter" width="30" height="30">
-      </a>
-      <a href="#" aria-label="Instagram">
-        <img src="images/instagram-icon.png" alt="Instagram" width="30" height="30">
-      </a>
+    <div class="footer-content">
+      <p>&copy; 2025 Whitewater Rafting | All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook Icon" width="32" height="32"
+            loading="lazy" /></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter Icon" width="32" height="32"
+            loading="lazy" /></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram-icon.png" alt="Instagram Icon" width="32"
+            height="32" loading="lazy" /></a>
+      </div>
     </div>
   </footer>
 </body>
